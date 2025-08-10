@@ -1,1 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Kevin Roper</title>
+  <meta name="description" content="Hyperspectral & LiDAR projects, workflows, and demos. From raw pixels to usable maps." />
+  <link rel="canonical" href="https://projects.kevin-roper.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projects — Kevin Roper" />
+  <meta property="og:description" content="Hyperspectral & LiDAR projects, workflows, and demos." />
+  <meta property="og:url" content="https://projects.kevin-roper.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root { --w: 980px; --pad: 20px; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body { font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:#111; background:#fff; }
+    header { padding:48px var(--pad) 16px; max-width:var(--w); margin:auto; }
+    h1 { margin:0 0 6px; font-size:28px; letter-spacing:.2px; }
+    .tag { color:#555; }
+    nav { padding:0 var(--pad) 24px; max-width:var(--w); margin:auto; display:flex; gap:18px; align-items:center; }
+    nav a { color:#0a58ca; text-decoration:none; }
+    nav .spacer { flex:1; }
+    main { padding:12px var(--pad) 64px; max-width:var(--w); margin:auto; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+    .card { border:1px solid #e9e9e9; border-radius:10px; padding:16px; background:#fff; }
+    .card h3 { margin:0 0 6px; font-size:18px; }
+    .meta { color:#666; font-size:14px; margin-bottom:8px; }
+    .card p { margin:0 0 10px; color:#222; }
+    .card a { color:#0a58ca; text-decoration:none; }
+    .pill { display:inline-block; font-size:12px; padding:2px 8px; border:1px solid #e2e2e2; border-radius:999px; margin-right:6px; color:#444; }
+    footer { border-top:1px solid #eee; color:#666; padding:18px var(--pad); max-width:var(--w); margin:40px auto 60px; }
+    @media (prefers-color-scheme: dark) {
+      body { background:#0c0c0c; color:#eee; }
+      .tag, .meta, footer { color:#aaa; }
+      .card { background:#121212; border-color:#1f1f1f; }
+      .pill { border-color:#2a2a2a; color:#bbb; }
+      nav a { color:#7bb0ff; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Projects</h1>
+    <div class="tag">From raw pixels to usable maps.</div>
+  </header>
 
+  <nav>
+    <a href="https://kevin-roper.com">← kevin-roper.com</a>
+    <div class="spacer"></div>
+    <a href="https://github.com/roperkevin">github</a>
+    <a href="#contact">contact</a>
+  </nav>
+
+  <main>
+    <section class="grid" aria-label="project list">
+      <!-- Project 1 -->
+      <article class="card">
+        <h3>Coastal Land-Cover at Scale</h3>
+        <div class="meta">Hyperspectral • Classification • Connecticut coastline</div>
+        <p>Species-level land-cover across 276 AOIs. Reproducible pipeline: calibration → rectification → indices → SAM/classifiers → QA.</p>
+        <div>
+          <span class="pill">hyperspectral</span>
+          <span class="pill">classification</span>
+          <span class="pill">ENVI</span>
+        </div>
+        <!-- replace links as you publish write-ups/demos -->
+        <p><a href="#">Case study (soon)</a></p>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card">
+        <h3>AFX10 Processing Pipeline</h3>
+        <div class="meta">Radiometric + geometric workflow</div>
+        <p>End-to-end scripts for AFX10: procdir/rectify, DEM selection, band lists, and batch runs. Focus on reliability and logs.</p>
+        <div>
+          <span class="pill">Python</span>
+          <span class="pill">PARGE</span>
+          <span class="pill">automation</span>
+        </div>
+        <p><a href="https://github.com/roperkevin" target="_blank" rel="noopener">Repo</a></p>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card">
+        <h3>LiDAR → DTM/DSM Toolkit</h3>
+        <div class="meta">LAStools • GDAL</div>
+        <p>Tile-based, multi-core pipeline for hillshades, contours, and rasters with indexing and unit conversions, ready for big jobs.</p>
+        <div>
+          <span class="pill">LiDAR</span>
+          <span class="pill">LAStools</span>
+          <span class="pill">GDAL</span>
+        </div>
+        <p><a href="https://github.com/roperkevin" target="_blank" rel="noopener">Repo</a></p>
+      </article>
+
+      <!-- Demo slot -->
+      <article class="card">
+        <h3>Leaflet Demo: Coastal AOI</h3>
+        <div class="meta">Web map demo</div>
+        <p>Simple Leaflet map to preview AOIs and overlays. Good for sharing quick looks.</p>
+        <div>
+          <span class="pill">Leaflet</span>
+          <span class="pill">web</span>
+        </div>
+        <p><a href="/demos/leaflet-coastline/" >Open demo</a></p>
+      </article>
+    </section>
+
+    <section id="contact" style="margin-top:32px">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:keroper9@gmail.com">keroper9@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>© <span id="y"></span> Kevin Roper • <a href="https://kevin-roper.com">kevin-roper.com</a></footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
